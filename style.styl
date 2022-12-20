@@ -1,0 +1,166 @@
+*
+  margin 0
+  padding 0
+
+li
+  list-style-type none
+
+html
+  scroll-behavior initial
+  font-family Satoshi Variable
+
+html, body
+  min-height 100%
+  height auto
+
+.section1__img, .section3__img
+  width 100%
+  max-width 2800px
+
+$tp = 10vw
+
+.section2
+  height auto
+  // display flex
+  position relative
+  // align-items center
+  padding 20vh $tp
+
+  &__subtitle
+    font-weight 500
+    font-size 21px
+    line-height 28px
+    text-align center
+    letter-spacing 0.15em
+    text-transform uppercase
+
+  &__title
+    text-align center
+    font-style normal
+    font-weight 500
+    font-size 7em
+    line-height 113.07%
+
+  &__screen1, &__screen2
+    position relative
+    padding 100px
+    display flex
+    align-items center
+    justify-content center
+    gap 9%
+    // border 1px solid white
+
+  &__screen1
+    flex-direction row-reverse
+
+.screen__phone
+  position relative
+  width calc((805px / 2))
+  // height calc((1556px / 2))
+  aspect-ratio 1 / 1.932 !important
+
+.screen__mock
+  position absolute
+  width 100%
+  height 100%
+  background url('src/iphone__mock.png')
+  background-size 100% 100%
+  top 0
+  left 0
+  // background #000
+  z-index 20
+
+.screen__screen1
+  position absolute
+  // width calc((692px / 2))
+  // height calc((1449px / 2))
+  width 90%
+  top 50%
+  left 50%
+  translate -50% -50%
+  background url('src/iphone__screen1.jpg')
+  background-size 100% auto
+  z-index 10
+  aspect-ratio 1 / 2.093 !important
+  border-radius 50px
+
+.screen__screen2
+  @extend .screen__screen1
+  background url('src/iphone__screen2.jpg')
+  background-size 100% auto
+  z-index 11
+
+.screen__title
+  font-weight 700
+  font-weight 700
+  font-size 24px
+  line-height 105% /* or 25px */
+  letter-spacing 0.02em
+
+.screen__text
+  font-style normal
+  font-weight 400
+  font-size 1.2em
+  line-height 150% /* or 21px */
+
+.screen__icon
+  background url('src/simplify__icon.png')
+  background-size 100% auto
+  width calc((165px / 2))
+  height calc((171px / 2))
+  margin 0 0 -20px -40px
+
+.screen__icon--pink
+  background url('src/simplify__icon--pink.png')
+  background-size 100% auto
+
+.screen1__phone-warpper, .screen2__phone-wrapper
+  overflow visible
+  // padding 0 10% 0 0
+  // background #000
+  // opacity 0.2
+
+.screen1
+  &__list
+    padding 10vh 0
+
+  &__list__li
+    padding-bottom 3vh
+
+  &__li__icon
+    @extend .screen__icon
+
+  &__li__title
+    @extend .screen__title
+    padding-bottom 2vh
+
+  &__li__text
+    @extend .screen__text
+
+  &__phone
+    @extend .screen__phone
+
+  &__mock
+    @extend .screen__mock
+
+  &__screen1
+    @extend .screen__screen1
+
+  &__screen2
+    @extend .screen__screen2
+
+.screen2
+  @extend .screen1
+
+  &__li__icon
+    @extend .screen__icon--pink
+
+.screen1__list__li
+  // background #000
+
+.section2__screen2-wrapper
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
