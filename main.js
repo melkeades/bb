@@ -26,13 +26,17 @@ const sec1 = gsap
   .from('.screen2__phone', { x: phoneMoveX, opacity: 0, duration: 1 })
   .from('.screen2__list__li', { y: 200, stagger: 0.3, opacity: 0 }, '>')
   .from('.screen2__screen2', { opacity: 0 }, '>-=-0.3')
-  .to('.screen2__list__li', { y: -100, stagger: 0.1, opacity: 0 }, '>-=0.1')
-  .add('', {})
+  .to('.screen2__phone', { y: -50, duration: 1.2 }, '<+=3')
+  .to('.screen2__list__li', { y: -100, stagger: { amount: 0.3 }, opacity: 0, duration: 0.7 }, '<+=0.2')
+  .to('.section3', { y: -400 })
+// .add('', {})
+
+// sec1.timeScale(0.1)
 
 ScrollTrigger.create({
   trigger: '.section2',
   start: 'top top',
-  end: 'bottom top',
+  end: 'bottom+=1000vh top',
   animation: sec1,
   scrub: 3,
   pin: '.section2',
