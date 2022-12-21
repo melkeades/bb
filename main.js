@@ -9,10 +9,7 @@ gsap.registerPlugin(ScrollTrigger)
 const wrapperContainer = document.createElement('div')
 const parrentContainer = select('.section2__screen1')
 wrapperContainer.setAttribute('class', 'section2__screen2-wrapper')
-// const wrapperContainer = select('.section2__screen1')
 const wrappingElement = select('.section2__screen2')
-// wrappingElement.replaceWith(wrapperContainer)
-// wrapperContainer.appendChild(wrappingElement)
 parrentContainer.appendChild(wrapperContainer)
 wrapperContainer.appendChild(wrappingElement)
 const phoneMoveX = '16vw'
@@ -23,26 +20,14 @@ const sec1 = gsap
   .from('.screen1__phone', { y: 100, duration: 2 }, '<')
   .from('.screen1__list__li', { y: 200, stagger: 0.3, opacity: 0 }, '<+=0.5')
   .from('.screen1__screen2', { opacity: 0 }, '>-=-0.3')
-  // .to('.screen1__phone-warpper', { overflow: 'hidden' }, '>')
   .to('.screen1__list__li', { y: -100, stagger: 0.1, opacity: 0 }, '>-=0.1')
   .to('.screen1__phone', { x: '-' + phoneMoveX, opacity: 0, duration: 1 }, '>-=0.4')
-  // .set('.section2__screen1', { display: 'none' })
   .set('.section2__screen2-wrapper', { opacity: 1 })
-  // .to('.screen2__phone-warpper', { overflow: 'hidden' }, '>')
   .from('.screen2__phone', { x: phoneMoveX, opacity: 0, duration: 1 })
   .from('.screen2__list__li', { y: 200, stagger: 0.3, opacity: 0 }, '>')
   .from('.screen2__screen2', { opacity: 0 }, '>-=-0.3')
-
   .to('.screen2__list__li', { y: -100, stagger: 0.1, opacity: 0 }, '>-=0.1')
-
   .add('', {})
-
-// // .set('.screen2__phone-warpper', { overflow: 'visible' }, '<')
-// .from('.screen2__phone', { y: 100, duration: 2 }, '<')
-// // .to('.screen2__phone', { y: -40, duration: 1 })
-// .from('.screen2__list__li', { y: 200, stagger: 0.1, opacity: 0 }, '0')
-// .from('.screen2__screen2', { opacity: 0 }, '>-=-0.3')
-// .to('.screen2__phone-warpper', { overflow: 'hidden' }, '<')
 
 ScrollTrigger.create({
   trigger: '.section2',
@@ -52,14 +37,6 @@ ScrollTrigger.create({
   scrub: 3,
   pin: '.section2',
 })
-// ScrollTrigger.create({
-//   trigger: '.section2__screen2',
-//   start: 'top top',
-//   end: 'bottom top',
-//   animation: sec2,
-//   scrub: 2,
-//   pin: '.section2__screen2',
-// })
 
 const lenis = new Lenis({
   duration: 1.2,
